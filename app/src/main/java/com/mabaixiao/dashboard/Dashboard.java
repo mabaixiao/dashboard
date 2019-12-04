@@ -50,9 +50,12 @@ public class Dashboard extends View {
                         mHeight / 2 - mWidth / 2 + 90, paintDegree);
             } else {
                 paintDegree.setStrokeWidth(3);
-                paintDegree.setTextSize(15);
+                paintDegree.setTextSize(25);
                 canvas.drawLine(mWidth / 2, mHeight / 2 - mWidth / 2,
                         mWidth / 2, mHeight / 2 - mWidth / 2 + 30, paintDegree);
+                String degree = String.valueOf(i);
+                canvas.drawText(degree, mWidth / 2 - paintDegree.measureText(degree) / 2,
+                        mHeight / 2 - mWidth / 2 + 60, paintDegree);
             }
             //通过旋转画布简化坐标运算
             canvas.rotate(15, mWidth / 2, mHeight / 2);
